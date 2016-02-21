@@ -54,7 +54,7 @@ public class CustomFontBuilder : Editor {
                 Font targetFont = (Font)target;
                 SerializedObject mFont = new SerializedObject(targetFont);
                 mFont.FindProperty("m_FontSize").floatValue= float.Parse(info.Attributes["size"].Value);
-                mFont.FindProperty("m_LineSpacing").floatValue = float.Parse(common.Attributes["lineHeight"].Value);
+                mFont.FindProperty("m_LineSpacing").floatValue = float.Parse(common.Attributes["base"].Value);
                 mFont.ApplyModifiedProperties();
                 //targetFont.lineHeight = int.Parse(info.Attributes["lineHeight"].Value);
                 if (charList > 0)
